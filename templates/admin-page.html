@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko" style="width: 100%; height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <style>
+        .row {
+            width: 100%;
+            flex-grow: 1;
+            overflow: hidden;
+            margin: 0;
+            
+        }
+
+        .plus-btn {
+            margin: 5px;
+            flex-grow: 1;
+            height: 100%;
+            font-size: 2.5em;
+        }
+
+        .solve-btn {
+            margin: 5px;
+            flex-grow: 1;
+            height: 100%;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body style="width: 100%; height: 100%; display: flex; flex-direction: column;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="text-align: center;">
+        <div class="container-fluid" style="text-align: center; justify-content: center; font-weight: bold;">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/brand/samgoe-logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                삼괴고선거관리위원회 X 
+                <img src="./assets/brand/DotJM-logo.svg" alt="" height="30" class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-md-8" style="display: flex; flex-direction: column; padding-bottom: 10px;">
+            
+            <div style="width: 100%; padding: 5px; flex-grow: 4; display: flex; flex-direction: row;">
+                <button type="button" class="btn btn-primary btn-1 plus-btn">기호1번 +1</button>
+                <button type="button" class="btn btn-info btn-2 plus-btn">기호2번 +1</button>
+            </div>
+            <div style="width: 100%; padding: 5px; flex-grow: 1; display: flex; flex-direction: row;">
+                <button type="button" class="btn btn-danger btn-1 solve-btn">기호1번 오류수정 -1</button>
+                <button type="button" class="btn btn-danger btn-2 solve-btn">기호2번 오류수정 -1</button>
+            </div>
+            
+        </div>
+        <div class="col-md-4"  style="display: flex; flex-direction: column; padding-top: 5px;">
+            <p>로그창 : </p>
+        </div>
+    </div>
+</body>
+</html>
