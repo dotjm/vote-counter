@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <title>테스트</title>
+
+    <style>
+        .col-md-6, .col1 {
+            width: 100vw;
+            height: 50vh;
+            /* height: 40vh; */
+            padding: 0;
+            overflow: hidden;
+            margin: 0;
+            text-align: center;
+        }
+
+
+        img.bg {
+            transform: scale(1);
+            position: absolute;
+            width: 100vw;
+            height: 50vh;
+            /* height: 40vh; */
+            overflow: hidden;
+            object-fit: cover;
+            transition: all 0.2s linear;
+
+        }
+
+        #col1:hover img#bg1 {
+            transform: scale(1.4);
+        }
+
+        .bg-black {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: black;
+            opacity: 0.7; 
+            width: 100vw;
+            /* height: 50vh; */
+            height: 40vh;
+        }
+
+        a.click-text {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            /* height: 50vh; */
+            height: 40vh;
+            color: whitesmoke;
+        }
+
+        .click-text div.link-texts-container {
+            position: absolute;
+            vertical-align: middle;
+            text-align: center;
+            width: 100%;
+            top: 10%;
+            
+        }
+
+
+        .number {
+            position: absolute;
+            vertical-align: middle;
+            text-align: center;
+            width: 100%;
+            top: 50%;
+            height: 50vh;
+            /* margin-top: 10vw; */
+            color: black;
+            text-align: center; 
+            vertical-align: middle;
+            font-weight: bold;
+            font-family: 'Do Hyeon', sans-serif;
+        
+        }
+
+        .number1 {
+            font-size: 50vmin;
+            margin-top: -30vmin;
+        }
+        .number2 {
+            font-size: 50vmin;
+            margin-top: -30vmin;
+        }
+
+        .title1 {
+            font-size: 15vmin;
+            margin-top: -0vmin;
+        }
+
+        .title2 {
+            font-size: 15vmin;
+            margin-top: -0vmin;
+        }
+
+        .click-text p {
+            /* position: absolute; */
+            width: 100%;
+            /* top: 50%; */
+            text-align: center; 
+            vertical-align: middle;
+            font-family: 'Do Hyeon', sans-serif;
+            color: black;
+            font-weight: bold;
+
+
+        }
+
+        .bg-rac {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -150px;
+            width: 300px;
+            height: 300px;
+            background-color: #0c0c0c;
+            border: 8px solid black; 
+            border-radius: 50%;
+            /* border-radius: 2em; */
+            opacity: 0.0;
+        }
+
+        .logo {
+            top: 10px;
+            left: 20px;
+        }
+
+        .area-1 {
+            border-bottom: 2px solid black;
+            border-right: 0px solid black;
+        }
+
+        .area-2 {
+            border-top: 2px solid black;
+            border-left: 0px solid black;
+        }
+
+
+        .bottom-button {
+            position: absolute;
+            bottom: 5px;
+            margin: 0;
+            margin-left: -50px;
+        }
+
+        .top-bar {
+            width: 100%; 
+            position: absolute; 
+            z-index: 2; 
+            background-color: white; 
+            border-bottom: 1px solid black;
+            text-align: center; 
+            vertical-align: middle;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        @media screen and (min-width:769px){
+            .col-md-6, .col1 {
+                width: 50vw;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .number {
+                position: absolute;
+                vertical-align: middle;
+                text-align: center;
+                width: 100%;
+                top: 50%;
+                margin-top: 10vw;
+                color: black;
+                text-align: center; 
+                vertical-align: middle;
+                font-family: 'Do Hyeon', sans-serif;
+            }
+
+            
+            .area-1 {
+                border-bottom: 0px solid black;
+                border-right: 2px solid black;
+            }
+
+            .area-2 {
+                border-top: 0px solid black;
+                border-left: 2px solid black;
+            }
+
+            img.bg {
+                width: 50vw;
+                height: 100vh;
+                overflow: hidden;
+            }
+            .bg-black {
+                width: 50vw;
+                height: 100vh;
+            }
+
+            a.click-text {
+                width: 50vw;
+                height: 100vh;
+            }
+            
+            /* .click-text p {
+                position: absolute;
+                width: 100%;
+                top: 50%;
+            } */
+
+            .click-text div.link-texts-container {
+                /* position: absolute;
+                vertical-align: middle;
+                text-align: center; */
+                width: 100%;
+                top: 10%;
+                font-weight: bold;
+
+            
+            }
+
+            .number {
+                position: absolute;
+                vertical-align: middle;
+                text-align: center;
+                width: 100%;
+                height: 100vh;
+                top: 50%;
+                /* margin-top: 10vw; */
+                color: black;
+                font-weight: bold;
+            }
+
+            /*
+             1자리수
+             폰트 사이즈 : 45vw
+             마진 탑 : -55vh
+
+             2자리수
+             동일
+
+             3자리수
+             폰트 사이즈 : 31vw
+             마진 탑 34vh;
+            */
+
+            .number1 {
+                position: absolute;
+                top: 50%;
+                font-size: 31vw;
+                margin-top: -35vh;
+                margin-left: -20px;
+            }
+
+            .number2 {
+                position: absolute;
+                top: 50%;
+                font-size: 31vw;
+                margin-top: -35vh;
+                margin-left: -20px;
+            }
+            /*
+            .number2 {
+                position: absolute;
+                top: 50%;
+                font-size: 45vw;
+                margin-left: -20px;
+                margin-top: -55vh;
+            }
+            */
+
+            .title1 {
+                position: absolute;
+                font-size: 18vh;
+                margin-top: -10vh;
+            }
+
+            .title2 {
+                position: absolute;
+                font-size: 18vh;
+                margin-top: -10vh;
+            }
+
+            .logo {
+                top: 20px;
+                left: 35px;
+            }
+
+            .logo img {
+                width: 200px;
+                height: 47px;
+            }
+            
+        }
+
+    </style>
+</head>
+<body style="width: 100%; height: 100%;">
+    <div style="width: 100%; height: 100%; overflow: hidden;">
+        <div class="top-bar" style="width: 100%; position: absolute; z-index: 2; background-color: white; ">
+            <div class="container-fluid" style="text-align: center; justify-content: center; vertical-align: middle;">
+                <div class="navbar-brand" href="#" style="text-align: center; justify-content: center; vertical-align: middle;">
+                    <img src="./assets/brand/samgoe-logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                    삼괴고선거관리위원회 X 
+                    <img src="./assets/brand/DotJM-logo.svg" alt="" height="30" class="d-inline-block align-text-top">
+                </div>
+            </div>
+        </div>
+        <!-- <h1 class="logo" style="position: absolute; z-index: 2;"><a href="index.html">StuLife<img src="../logo/betatest.png" width="171.5" height="40"/></a></h1> -->
+        <div class="row" style="width: 100%; height: 100%; margin: 0px; position: absolute; z-index: 1; overflow: hidden;">
+            <div class="col-md-6 area-1" style="">
+                <div class="col1" style="position: relative;">
+                    <div class="bg-1"></div>
+                    <a href="" class="click-text">
+                        <div class="bg-rac"></div>
+                        <div class="link-texts-container"> 
+                            <p class="title title1" style="">기호 1번</p>
+                        </div>
+                                          
+                    </a>
+                    <div href="" class="number number1" style="" id="number-1">
+                        {{num1}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 area-2">
+                <div class="col1" style="position: relative;">
+                    <div class="bg-2"></div>
+                    <a href="" class="click-text">
+                        <div class="bg-rac"></div>
+                        <div class="link-texts-container"> 
+                            <p class="title title2" style="">기호 2번</p>
+                        </div>
+                                          
+                    </a>
+                    <div href="" class="number number2" style="" id="number-2"> <!-- 30 40 50  -->
+                        {{num2}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var socket;
+        $(document).ready(function(){
+            socket = io.connect('http://' + document.domain + ':' + location.port + '/votesocket');
+            socket.on('connect', function() {
+                // socket.emit('joined', {});
+                console.log('서버 연결 성공');
+            });
+            socket.on('status', function(data) {
+                console.log('데이터 수신');
+                $('#number-1').text(data.num1);
+                $('#number-2').text(data.num2);
+                //$('#chat').val($('#chat').val() + '<' + data.msg + '>\n');
+                //$('#chat').scrollTop($('#chat')[0].scrollHeight);
+            });
+
+            // socket.on('message', function(data) {
+            //     $('#chat').val($('#chat').val() + data.msg + '\n');
+            //     $('#chat').scrollTop($('#chat')[0].scrollHeight);
+            // });
+            // $('#text').keypress(function(e) {
+            //     var code = e.keyCode || e.which;
+            //     if (code == 13) {
+            //         text = $('#text').val();
+            //         $('#text').val('');
+            //         socket.emit('text', {msg: text});
+            //     }
+            // });
+        });
+    
+    </script>
+</body>
+</html>

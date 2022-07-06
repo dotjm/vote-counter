@@ -88,11 +88,11 @@
     <h1 class="h3 mb-3 fw-normal">관리자 확인 필요</h1>
 
     <div class="form-floating">
-      <input type="id" class="form-control" id="floatingInput" placeholder="ID">
+      <input type="id" class="form-control" id="floatingInput" placeholder="ID" name="id">
       <label for="floatingInput">관리자 ID</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="pw">
       <label for="floatingPassword">비밀번호</label>
     </div>
 
@@ -101,6 +101,9 @@
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div> -->
+    <div style="color: red;">
+        {{errortext}}
+    </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">확인</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017–2022 DotJM</p>
   </form>
