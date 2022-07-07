@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko" style="width: 100%; height: 100%; margin: 0;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼괴고선거개표현황(방송용) 웹 by DotJM Studio</title>
+    <style>
+        .hidden {
+            display: none;
+            opacity: 0;
+        }
+
+        .appear {
+            animation: fade-in 1s;
+            animation-fill-mode: forwards;
+            display: flex;
+        }
+
+        .disappear {
+            animation: fade-out 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        iframe {
+            position: absolute;
+        }
+    </style>
+</head>
+<body style="width: 100%; height: 100%; margin: 0;">
+    <!-- <div style="width: 100%; height: 100%; margin: 0;">
+
+    </div> -->
+    <iframe src="/" frameborder="0" style="width: 100%; height: 100%;" id="main"></iframe>
+    <iframe src="/per" frameborder="0" style="width: 100%; height: 100%;" id="percent"></iframe>
+    <iframe src="/per-g" frameborder="0" style="width: 100%; height: 100%;" id="pg"></iframe>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            // main_disappear()
+            // setTimeout("main_appear()", 5000);
+            main_appear();
+            per_disappear();
+            g_disappear();
+            
+
+            setInterval(function() { 
+                main_appear();
+                g_disappear();
+            }, 30000);
+
+
+            setTimeout(function(){ 
+                main_disappear();
+                per_appear();
+                setInterval(function() { 
+                    main_disappear();
+                    per_appear();
+                }, 30000);
+            },10000);
+
+
+            setTimeout(function(){ 
+                per_disappear();
+                g_appear();
+                setInterval(function() { 
+                    per_disappear();
+                    g_appear();
+                }, 30000);
+            },20000);
+        });
+
+        function main_appear() {
+            // setInterval(function() { 
+            //     console.log('나타나기');
+            //     document.querySelector('#main').classList.remove('disappear');
+	        //     document.querySelector('#main').classList.add('appear');
+            // }, 10000);
+            document.querySelector('#main').classList.remove('disappear');
+            document.querySelector('#main').classList.add('appear');
+        }
+        function main_disappear() {
+            // setInterval(function() { 
+            //     console.log('사라지기');
+            //     // document.querySelector('#main').classList.remove('disappear');
+	        //     // document.querySelector('#main').classList.add('appear');
+            //     document.querySelector('#main').classList.add('disappear');
+            //     setTimeout(function(){ document.querySelector('#main').classList.remove('appear')},1001);
+            // }, 10000);
+            document.querySelector('#main').classList.add('disappear');
+            setTimeout(function(){ document.querySelector('#main').classList.remove('appear')},1001);
+        }
+
+        function per_appear() {
+            document.querySelector('#percent').classList.remove('disappear');
+            document.querySelector('#percent').classList.add('appear');
+        }
+
+        function per_disappear() {
+            document.querySelector('#percent').classList.add('disappear');
+            setTimeout(function(){ document.querySelector('#percent').classList.remove('appear')},1001);
+        }
+
+
+        function g_appear() {
+            document.querySelector('#pg').classList.remove('disappear');
+            document.querySelector('#pg').classList.add('appear');
+        }
+        
+        function g_disappear() {
+            document.querySelector('#pg').classList.add('disappear');
+            setTimeout(function(){ document.querySelector('#pg').classList.remove('appear')},1001);
+        }
+    
+    </script>
+    
+</body>
+</html>
